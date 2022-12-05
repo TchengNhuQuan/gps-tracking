@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Realtime location tracker</title>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- leaflet css  -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://trackinggps069274.herokuapp.com/socket.io/socket.io.js"></script>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+        font-size: 1.2rem;
+      }
+      #map {
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="register">
+      <div
+        for="text_welcome"
+        style="
+          margin-right: 5px;
+          text-shadow: 2px 2px 40px #7b6ee8;
+          color: white;
+          font-weight: 800;
+          font-size: 50px;
+        "
+      >
+        PRESS UR NAME TO KNOW UR LOCAL
+      </div>
+      <input
+        id="name"
+        type="text"
+        name="name"
+        placeholder="   Press your name"
+      />
+      <br />
+      <input id="submit" type="button" value="GET STARTED" />
+    </div>
+    <div id="main">
+      <div
+        style="
+          float: right;
+          height: 40px;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          width: 100%;
+        "
+        class="top-right"
+      >
+        <span
+          style="
+            color: white;
+            font-size: 1.4rem;
+            padding-left: 5%;
+            padding-right: 35%;
+          "
+          >TRACKING GPS</span
+        >
+        <label for="" style="color: white">UserName</label>
+        <input
+          id="username"
+          style="
+            height: 34px;
+            border-radius: 4px;
+            font-size: 1.2rem;
+            background-color: white;
+          "
+          type="text"
+          disabled="true"
+        />
+        <button id="logout">LOGOUT</button>
+      </div>
+      <div id="usersOnline">
+        <div id="header" style="height: 40px; padding-top: 20px; color: white">
+          <span> Danh sách Đối Tượng </span>
+         </div>
+         <div id="objects"></div>
+      </div>
+      <div id="map"></div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+body {
+  font-size: xx-large;
+  background-color: rgb(28, 22, 70);
+}
+
+#usersOnline {
+  width: 20%;
+  float: left;
+  background-color: rgba(250, 249, 249, 0.911);
+  text-align: center;
+}
+
+#usersOnline #header {
+  font-weight: bold;
+  background-color: #ee4d3d;
+  border-bottom: 1px solid black;
+}
+
+#map {
+  width: 80%;
+  float: right;
+}
+
+*#register {
+  text-align: center;
+  margin: 150px 0;
+}
+
+#submit {
+  margin-top: 30px;
+  background-color: rgb(68, 55, 178);
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+#submit:hover,
+#logout:hover {
+  background-color: rgb(134, 123, 227);
+  color: rgb(0, 0, 0);
+  transition: 0.5s;
+}
+
+#name {
+  border: none;
+  outline: none;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+#logout {
+  background-color: rgb(68, 55, 178);
+  color: white;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+}
