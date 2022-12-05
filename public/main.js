@@ -3,7 +3,7 @@ $(document).ready(function () {
   $("#register").show();
   $("#main").hide();
 });
-var socket = io.connect("http://localhost:3000/");
+var socket = io.connect("https://gps-tracking.onrender.com/");
 var connected = false;
 // Map initialization
 var map = L.map("map").setView([14.0860746, 100.608406], 6);
